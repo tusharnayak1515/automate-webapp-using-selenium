@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            width: 100%;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .form {
+            width: 300px;
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .form input, .form button {
+            padding: 0.5rem 1rem;
+        }
+
+        .form input {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form class="form" onsubmit="onSubmitHandler(event)">
+        <h1>Register</h1>
+        <input type="text" name="name" id="name" placeholder="Name" />
+        <input type="email" name="email" id="email" placeholder="Email" />
+        <input type="password" name="password" id="password" placeholder="Password" />
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        const onSubmitHandler = (e)=> {
+            e.preventDefault();
+            alert("Registration successful");
+            const form = document.querySelector(".form");
+            form.reset();
+        }
+    </script>
+</body>
+</html>
